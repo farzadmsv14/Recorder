@@ -8,5 +8,9 @@
     <div *ngIf="isRecording" class="recording-indicator"></div>
   </button>
 
-  <audio *ngIf="audioUrl" [src]="audioUrl" controls class="audio-player"></audio>
+  <!-- فایل صوتی بعد از ضبط نمایش داده می‌شود -->
+  <div class="audio-wrapper" *ngIf="audioUrl">
+    <h4>فایل صوتی ضبط‌شده:</h4>
+    <audio [src]="audioUrl" controls class="audio-player"></audio>
+  </div>
 </div>
